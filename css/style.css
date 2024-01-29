@@ -1,0 +1,337 @@
+/* COMMON CSS START */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+    /* background: linear-gradient(130deg, #000 0%, #272727 44.03%, #494949 99.99%, #727272 100%); */
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+body{
+    background: linear-gradient(130deg, #000 0%, #272727 44.03%, #494949 99.99%, #727272 100%);
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background 0.4s;
+}
+body.background_show{
+    background-color: #dacece;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+}
+/* COMMON CSS END */
+
+/* NAVBAR SECTION START */
+#nav {
+    background-color: red;
+    /* position: sticky;
+    top: 0; */
+}
+#nav .row{
+    justify-content: space-between;
+    align-items: center;
+}
+#nav  ul li{
+    display: inline-block;
+    padding: 10px;
+}
+#nav  ul li button.change_mode{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+}
+#nav  ul li button.change_mode.show{
+    color: #000;
+    background-color: #fff;
+}
+#nav  ul li button.registration_btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #70FF00;
+}
+#nav  ul li i{
+    color: #fff;
+    font-size: 20px;
+    
+}
+/* NAVBAR SECTION END */
+
+/* SEARCH BAR SECTION START */
+#search_bar .search_bar input{
+    padding: 10px;
+    width: 400px;
+    height: 60px;
+    border-radius: 25px 0 0 25px;
+    outline: 0;
+    border: none;
+    background-color: #d3b7b7;
+    font-size: 20px;
+
+}
+#search_bar .search_bar input:placeholder-shown{
+    text-align: center;
+}
+#search_bar .search_bar button{
+    padding: 10px;
+    height: 60px;
+    width: 100px;
+    border-radius:  0 25px 25px 0;
+   border: none;
+   background-color:#997474;
+}
+#search_bar .search_bar{
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+#search_bar .search_bar.search_bar_show{
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    background-color: #3a3535;
+}
+/* SEARCH BAR SECTION END */
+
+
+/* DROPDOWN SECTION START */
+
+ #drop_down {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    position: relative;
+    transition:  0.4s;
+    display: none;
+
+}
+#drop_down.list_show{
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    color: white;
+    display: block;
+}
+#drop_down .drop_down_menu ul li{
+    padding: 0 0 70px 0;
+}
+#drop_down .drop_down_menu ul li a{
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+#drop_down .drop_down_menu.list_show a{
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* DROPDOWN SECTION END */
+
+/* HERO SECTION START */
+#hero_area h4{
+    color: var(--Gray-5, #E0E0E0);
+    font-family: Roboto;
+    font-size: 39px;
+    font-weight: 700;
+    padding-top: 223px;
+}
+#hero_area h1{
+   color: #70FF00;
+    font-family: Roboto;
+    font-size: 78px;
+    font-weight: 700;
+    letter-spacing: 7.8px;
+    padding: 20px 0 59px 0;
+}
+#hero_area h2{
+    color: var(--Gray-5, #E0E0E0);
+    font-family: Roboto;
+    font-size: 57px;
+    font-weight: 700;
+    padding-bottom: 100px;
+ }
+ #hero_area .hero_img img{
+    width: 100%;
+ }
+#hero_area .hero_img{
+    margin-top: 100px;
+}
+#hero_area .text_mode_change{
+    color: #000;
+ }
+
+#hero_area .text_mode_change.show h4{
+    color: #000;
+}
+#hero_area .text_mode_change.show h2{
+    color: #000;
+}
+/* HERO SECTION END */
+
+/* Registration form start*/
+#registration{
+    opacity: 0;
+    visibility: hidden;
+    transform: 0.4s; 
+    /* background-color: red; */
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+#registration.registration_show{
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+#registration .container{
+    /* background-color: rgb(41, 40, 40); */
+    width: 100%;
+    height: 100vh;
+}
+#registration .form_box{
+    width: 450px;
+    position: absolute;
+    top: 55%;
+    /*bottom: -120%;
+    */left: 50%;
+    background: rgb(68, 58, 58);
+    padding: 50px 60px 70px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius:15px ;
+}
+#registration .form_box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #70FF00;
+    position: relative;
+}
+#registration .form_box h1::after{
+    content: "";
+    position: absolute;
+    left: 125px;
+    bottom: -10px;
+    width: 85px;
+    height: 4px;
+    background-color: #70FF00;
+ 
+}
+.input_feild{
+    background-color: #dacece;
+    margin: 15px 0;
+    border-radius: 15px;
+     display: flex;
+     align-items: center;
+}
+#registration .form_box .input_feild input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: 0;
+    border: none;
+}
+#registration .form_box .input_feild  i{
+    margin-left: 10px;
+    color: #999;
+}
+#registration form p{
+    color: #70FF00;
+    font-size: 18px;
+    text-align: left;
+}
+#registration form a{
+    color: #0e0af1;
+    font-size: 18px;
+    text-align: left;
+}
+#registration form .btn_felid{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#registration form .btn_felid button{
+     padding: 10px 55px;
+     background-color: #70FF00;
+     border-radius:15px ;
+     border: none;
+     outline: 0;
+     cursor: pointer;
+     transition: background 1s;
+    margin-top: 40px;
+}
+/* Registration form end*/
+
+
+/* ABOUT SECTION START */
+#about h5{
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.5;
+}
+#about h1{
+    color: #70FF00;
+    font-size: 35px;
+    line-height: 1.5;
+    padding: 10px 0 25px 0;
+    text-align: center;
+    position: relative;
+}
+#about h1::after{
+    content: "";
+    width: 235px;
+    height: 6px;
+    position: absolute;
+    left: 40%;
+    top: 58px;
+    background-color: #70FF00;
+    border-radius: 15px;
+}
+#about.about_text_show h5{
+    color: #000;
+    font-size: 25px;
+    line-height: 1.5;
+}
+#about.about_text_show h1{
+    color: #000;
+}
+#about.about_text_show h1::after{
+    background-color: #000;
+}
+/* ABOUT SECTION END */
+
+
